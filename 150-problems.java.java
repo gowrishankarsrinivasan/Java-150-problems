@@ -59,3 +59,81 @@ class Main {
         merge(arr1, m, arr2, n);
     }
 }
+
+
+
+
+
+
+
+
+
+//sorting algorithm
+// 1.Bubble Sort
+
+
+
+class Main{
+    public static void main(String[] args){
+        
+        int[] arr = {5,4,3,2,1,0};
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+
+        int minIndex = 0;
+        int temp = 0;
+
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[i] > arr[j]) {
+                    temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+    }
+}
+
+
+
+
+// 2.Selection sort
+class Main{
+    public static void main(String[] args){
+        
+        int[] arr = {5,4,3,2,1,0};
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        int minIndex = 0;
+        int temp = 0;
+
+        for(int i = 0; i < arr.length - 1; i++){
+            minIndex = i;
+            for( int j = i + 1; j < arr.length;j++){
+                if(arr[j] < arr[minIndex]){
+                    minIndex = j;
+                }
+            }
+            temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]+" ");
+        }
+
+    }
+}
